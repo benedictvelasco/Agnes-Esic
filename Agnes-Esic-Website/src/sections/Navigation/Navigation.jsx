@@ -2,29 +2,55 @@ import userIcon from "../../assets/icons/user.svg";
 import cartIcon from "../../assets/icons/cart.svg";
 
 export default function Navigation() {
+  const handleClick = (targetId) => {
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      // fallback: update hash so SPA routers or other pages can respond
+      window.location.hash = `#${targetId}`;
+    }
+  };
+
   return (
     <nav className="w-full">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between py-6">
-
         {/* LEFT */}
         <div className="flex items-center gap-10">
-
           <h1 className="text-white text-2xl font-bold cursor-pointer">
             Agnes Esic
           </h1>
 
           <div className="flex items-center gap-6 text-white/70">
-            <button className="hover:text-white">Shop Parts</button>
-            <button className="hover:text-white">Services</button>
-            <button className="hover:text-white">About</button>
-            <button className="hover:text-white">Contact</button>
+            <button
+              className="hover:text-white"
+              onClick={() => handleClick("shop")}
+            >
+              Shop Parts
+            </button>
+            <button
+              className="hover:text-white"
+              onClick={() => handleClick("services")}
+            >
+              Services
+            </button>
+            <button
+              className="hover:text-white"
+              onClick={() => handleClick("about")}
+            >
+              About
+            </button>
+            <button
+              className="hover:text-white"
+              onClick={() => handleClick("contact")}
+            >
+              Contact
+            </button>
           </div>
-
         </div>
 
         {/* RIGHT */}
         <div className="flex items-center gap-4">
-
           <button className="w-10 h-10 flex items-center justify-center">
             <img src={userIcon} className="w-5 h-5" />
           </button>
@@ -35,9 +61,7 @@ export default function Navigation() {
               0
             </span>
           </button>
-
         </div>
-
       </div>
     </nav>
   );

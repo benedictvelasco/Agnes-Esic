@@ -31,16 +31,14 @@ export default function Hero({ children }) {
           </p>
 
           <div className="flex gap-4 mt-8">
-
-            <button className="flex items-center gap-3 bg-yellow-400 text-black px-6 py-3 font-semibold">
+            <button className="group flex items-center gap-3 bg-yellow-400 text-black px-6 py-3 font-semibold transition-all duration-300 hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-400/50 transform hover:scale-105">
               Shop Parts
-              <img src={barrow} className="w-4 h-4" />
+              <img src={barrow} className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </button>
 
-            <button className="border border-white/30 px-6 py-3">
+            <button className="group border border-white/30 px-6 py-3 transition-all duration-300 hover:border-yellow-400 hover:text-yellow-400 hover:bg-white/5 transform hover:scale-105">
               Contact Us
             </button>
-
           </div>
 
           <div className="mt-10 flex flex-col gap-3 text-white/70 text-sm">

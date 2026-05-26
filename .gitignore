@@ -1,0 +1,10 @@
+node_modules/
+dist/
+Agnes-Esic-Website/node_modules/
+.env
+.vite/
+coverage/
+*.log
+.DS_Store
+/.idea/
+/.vscode/

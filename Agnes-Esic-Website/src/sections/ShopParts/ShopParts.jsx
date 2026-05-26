@@ -15,7 +15,6 @@ export default function ShopParts() {
       title: "Premium Fluids",
       tag: "Maintenance",
       img: fluidImg,
-      price: "$15.99",
       description: "High-quality synthetic and conventional oils for optimal engine protection.",
     },
     {
@@ -23,7 +22,6 @@ export default function ShopParts() {
       title: "Brake Systems",
       tag: "Safety",
       img: brakesImg,
-      price: "$49.99",
       description: "Professional-grade brake pads and rotors for safe stopping power.",
     },
     {
@@ -31,7 +29,6 @@ export default function ShopParts() {
       title: "Engine Parts",
       tag: "Performance",
       img: engineImg,
-      price: "$89.99",
       description: "OEM-quality engine components for reliability and performance.",
     },
     {
@@ -39,7 +36,6 @@ export default function ShopParts() {
       title: "Performance Tires",
       tag: "Tires & Wheels",
       img: tiresImg,
-      price: "$129.99",
       description: "Premium tires engineered for traction and durability.",
     },
   ];
